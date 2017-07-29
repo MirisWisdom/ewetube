@@ -2,7 +2,7 @@
 
 class Form
 {
-    public static function ForStates($action, $method, $dropdownMarkup)
+    public static function ForStates($action, $method, $dropdownMarkup, $dropdownMarkup2, $dropdownMarkup3, $dropdownMarkup4)
     {
         return <<<HTML
 <div class="container padding-50">
@@ -17,11 +17,32 @@ class Form
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group row">
-                                                <p class="control-label col-md-12 text-center">Select Your State:</p>
-                                                <br>
-                                                <br>
+
                                                 <div class="col-md-12">
+                                                    <p class="control-label col-md-12 text-center">Select Your State:</p>
+                                                    <br>
                                                     {$dropdownMarkup}
+                                                    <br>
+                                                </div>
+                                                <div class="col-md-12">
+                                                    <p class="control-label col-md-12 text-center">Select Your Industry:</p>
+                                                    <br>
+                                                    {$dropdownMarkup2}
+                                                    <br>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="control-label col-md-12 text-center">Start Year:</p>
+                                                    <br>
+                                                    {$dropdownMarkup3}
+                                                    <br>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <p class="control-label col-md-12 text-center">End Year:</p>
+                                                    <br>
+                                                    {$dropdownMarkup4}
+                                                    <br>
+                                                </div>
+                                                <div class="col-md-12">
                                                     <input type="submit" value="Search" class="btn btn-success btn-block" style="margin-top: 5px">
                                                 </div>
                                             </div>
@@ -39,4 +60,6 @@ class Form
 HTML;
 
     }
+
+
 }

@@ -3,11 +3,15 @@ require_once('components/head.php');
 require_once('components/form.php');
 require_once('components/dropdown.php');
 require_once('config/dbconfig.php');
+require_once('data/search.php'); //This is where I'm storing the $_GET variables eg. $get_state
+require_once('data/Classes.php');
+
+
 require_once('data/MeatProduced.php');
-require_once('data/States.php');
 
 $states = new States($db);
-echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->GetAll()));
+$animals = new Animals($db);
+$years = new Years($db);
 
 
 
@@ -15,7 +19,17 @@ echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->Ge
 
 
 
-
+<div class="container-fluid rgba-white-0 padding-50" style="background: url('assets/img/bg.jpg')">
+  <div class="container">
+    <div class="text-center">
+      <h2>Your Search Query:</h2>
+      <?php
+      echo '<h4>'.$get_animal.' data recorded in '.$get_state.' between Jan '.$get_year1.' and Dec '.$get_year2.'</h4>';
+      ?>
+      <a href="index.php" class="btn btn-sm btn-danger">Start a new search</a>
+    </div>
+  </div>
+</div>
 
 
 
@@ -72,6 +86,16 @@ echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->Ge
 </div>
 
 
+
+<div class="container padding-50">
+  <div class="row">
+    <div class="col-md-12 text-center">
+
+      <a href="request/slide.php" class="btn btn-lg btn-primary">Save Results to Google Slide Presentation <span class="glyphicon glyphicon-new-window"></span></a>
+
+    </div>
+  </div>
+</div>
 
 
 
@@ -148,6 +172,19 @@ if(isset($_GET['state'])){
   }
 
 }
+
+?>
+
+<div class="container text-center" style="padding-top:30px; margin-bottom:-30px;">
+<h2>New Search</h2>
+</div>
+
+<?php 
+echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->GetAll()), Dropdown::ForAnimals("animal", $animals->GetAll()), Dropdown::ForYears("year1", $years->GetAll()), Dropdown::ForYears("year2", $years->GetAll()));
+?>
+
+
+<?php 
 
 require_once('components/footer.php');
 
