@@ -45,3 +45,12 @@ canvas {
 	display: inline-block;
 	float: none;
 }
+
+.btn-success {
+	background-color: rgba(198, 35, 87, 1) !important;
+	border-color: rgba(126, 0, 40, 1) !important;
+}
+
+.btn-success:hover {
+	background-color: rgba(126, 0, 40, 1) !important;
+}
