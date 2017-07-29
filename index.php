@@ -10,7 +10,9 @@ foreach(glob(dirname(__FILE__) . '/functions/func.*.php') as $function){
 require_once('components/head.php');
 
 $indexHead = new Head();
+$indexHead->AddStylesheet("main");
 $indexHead->AddStylesheet("index");
+$indexHead->AddStylesheet("color");
 
 echo $indexHead->GetMarkup();
 ?>
