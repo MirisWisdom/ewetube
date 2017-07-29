@@ -123,3 +123,4 @@ fabric.properties
 
 # Sonarlint plugin
 .idea/sonarlint
+dbconfig.php
