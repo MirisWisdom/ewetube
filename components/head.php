@@ -7,7 +7,6 @@ foreach(glob(dirname(__FILE__) . '/functions/func.*.php') as $function){
 
 $indexHead = new Head();
 $indexHead->AddStylesheet("main");
-$indexHead->AddStylesheet("index");
 $indexHead->AddStylesheet("color");
 
 echo $indexHead->GetMarkup();
