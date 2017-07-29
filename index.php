@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<?php require_once('components/head.php') ?>
+<?php
+require_once('components/head.php');
+
+$indexHead = new Head();
+$indexHead->AddStylesheet("index");
+
+echo $indexHead->GetMarkup();
+?>
 <body>
 	<?php require_once('components/navbar.php') ?>
 
