@@ -13,7 +13,7 @@ $states = new States($db);
 $animals = new Animals($db);
 $years = new Years($db);
 
-
+$MeatProduced = new MeatProduced($db);
 
 ?>
 
@@ -30,6 +30,15 @@ $years = new Years($db);
     </div>
   </div>
 </div>
+
+
+<?php 
+
+echo '<pre>';
+print_r($MeatProduced);
+echo '</pre>';
+
+?>
 
 
 
@@ -149,8 +158,8 @@ if(isset($_GET['state'])){
         $name = $bom_town['description'];
         $forecast = $bom_town->{'forecast-period'}[0]->text;
 
-        $print .= '<div class="col-md-6"><div class="well rgba-black-0">';
-        $print .= '<h4>'.$name.'</h4>';
+        $print .= '<div class="col-md-6"><div class="well matchheight rgba-black-0">';
+        $print .= '<h3>'.$name.'</h3>';
         $print .= '<p>'.$forecast.'</p>';
         $print .= '</div></div>';
 
