@@ -17,8 +17,10 @@ class Form
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="form-group row">
-                                                <label class="control-label text-right col-md-3">Select Your State</label>
-                                                <div class="col-md-9">
+                                                <p class="control-label col-md-12 text-center">Select Your State:</p>
+                                                <br>
+                                                <br>
+                                                <div class="col-md-12">
                                                     {$dropdownMarkup}
                                                     <input type="submit" value="Search" class="btn btn-success btn-block" style="margin-top: 5px">
                                                 </div>
