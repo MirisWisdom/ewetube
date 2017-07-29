@@ -1,3 +1,23 @@
+<?php
+
+class Head
+{
+	private $stylesheets = array();
+
+	public function AddStylesheet($name)
+	{
+		array_push($this->stylesheets, $name);
+	}
+
+	public function GetMarkup()
+	{
+		$stylesheetLinks = null;
+
+		foreach ($this->stylesheets as $name) {
+			$stylesheetLinks = $stylesheetLinks . "<link href='assets/css/$name.css' rel='stylesheet'>\n\t";
+		}
+
+		return <<<HTML
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -9,4 +29,8 @@
 
 	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/main.css" rel="stylesheet">
+	{$stylesheetLinks}
 </head>
+HTML;
+	}
+}
