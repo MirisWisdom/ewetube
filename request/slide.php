@@ -1,8 +1,10 @@
 <?php
 
 $markdown = new Markdown();
-$markdown->AddRequest($_GET['latitude']);
-$markdown->AddRequest($_GET['longitude']);
+$markdown->AddRequest("latitude", "latitude_blank");
+$markdown->AddRequest("longitude", "longitude_blank");
+
+echo $markdown->GetMarkdown();
 
 file_put_contents('markdown.md', $markdown->GetMarkdown());
 
@@ -14,17 +16,27 @@ class Markdown
 {
 	private $requests = array();
 
-	public function AddRequest($value)
+	public function AddRequest($variableName, $defaultValue)
 	{
-		array_push($this->requests, $value);
+		array_push($this->requests, $this->HandleVariable($variableName, $defaultValue));
 	}
+
+    private function HandleVariable($variableName, $defaultValue)
+    {
+        if (!isset($_GET[$variableName])) {
+            $_GET[$variableName] = $defaultValue;
+            return $_GET[$variableName];
+        } else {
+            return $_GET[$variableName];
+        }
+    }
 
 	public function GetMarkdown()
 	{
 		$markdownData = null;
 
 		foreach ($this->requests as $request) {
-			$markdownData = "$markdownData $request \n";
+			$markdownData .= "$request :: ";
 		}
 
 		return <<<MD
