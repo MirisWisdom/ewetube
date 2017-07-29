@@ -20,3 +20,22 @@ img{
 .text-center{
 	text-align: center !important;
 }
+
+canvas{
+	margin-bottom: 30px;
+}
+
+.relative{
+	position: relative !important;
+}
+
+.navbar-header{
+	float: none;
+    text-align: center;
+    margin: auto;
+}
+
+.navbar-brand{
+	display: inline-block;
+    float: none;
+}
