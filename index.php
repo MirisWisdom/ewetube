@@ -1,13 +1,12 @@
 <?php
 require_once('components/head.php');
-require_once('components/navbar.php')
 ?>
-	<div class="container-fluid bg-rgba-primary-4 rgba-white-0 padding-50">
+	<div class="container-fluid rgba-white-0 padding-50" style="background: #222">
 		<div class="container">
 			<div class="text-center">
 				<img src="assets/img/icon.png" alt="EweTube" style="max-width: 300px;" />
-				<h1>Welcome to EweTube.Space</h1>
-				<p>Enter your search queries below to find data in your region</p>
+				<h1 style="color: #555">Welcome to <span class="rgba-primary-0">EweTube</span>.<span style="color: #3B9ACB">Space</span></h1>
+				<p style="color: #AAA">Enter your search queries below to find data in your region</p>
 				<!-- <a href="/search" class="btn btn-primary">Get Started Now!</a> -->
 				<p>[INSERT FORM HERE]</p>
 			</div>

@@ -44,7 +44,8 @@ class Head
 	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/main.css" rel="stylesheet">
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" ></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+	 <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
 
 	<!-- Added by Michael -->
 	
