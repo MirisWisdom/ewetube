@@ -1,5 +1,8 @@
 <?php
 require_once('components/head.php');
+require_once('components/form.php');
+require_once('components/dropdown.php');
+require_once('data/States.php');
 require_once('config/dbconfig.php');
 ?>
 	<div class="container-fluid rgba-white-0 padding-50" style="background: #222">
@@ -8,108 +11,15 @@ require_once('config/dbconfig.php');
 				<img src="assets/img/icon.png" alt="EweTube" style="max-width: 300px;" />
 				<h1 style="color: #555">Welcome to <span class="rgba-primary-0">EweTube</span>.<span style="color: #3B9ACB">Space</span></h1>
 				<p style="color: #AAA">Enter your search queries below to find data in your region</p>
-				<!-- <a href="/search" class="btn btn-primary">Get Started Now!</a> -->
-				
 
+                <?php
+                $states = new States($db);
+                echo Form::ForStates("bom.php", "get", Dropdown::ForStates("state", $states->GetAll()));
+                ?>
 
-
-
-
-
-
-
-
-<div class="row text-center padding-50">
-	<div class="col-md-6 col-md-offset-3">
-		<form action="data.php" class="form-horizontal" method="GET">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="form-group row">
-						<label class="control-label text-right col-md-3">Select Your State</label>
-						<div class="col-md-9">
-							<select name="state" class="form-control custom-select">
-<?php
-$stmt_d_state = $db->prepare('
-   SELECT DISTINCT
-        meat_state
-    FROM
-        meat_produced
-    ORDER BY
-        meat_state
-    ASC
-');
-
-$stmt_d_state -> execute();
-
-$d_stateArray = array();
-$d_stateArray[0] = '- Select a State -';
-while($d_state = $stmt_d_state -> fetch(PDO::FETCH_COLUMN))
-{
-    $d_stateArray[$d_state] = $d_state;
-
-    if($d_state == 'Western Australia'){
-      $d_state_abbr = 'wa';
-    } else if($d_state == 'New South Whales'){
-      $d_state_abbr = 'nsw';
-    } else if($d_state == 'Queensland'){
-      $d_state_abbr = 'qld';
-    } else if($d_state == 'Victoria'){
-      $d_state_abbr = 'vic';
-    } else if($d_state == 'South Australia'){
-      $d_state_abbr = 'sa';
-    } else if($d_state == 'Northern Territory'){
-      $d_state_abbr = 'nt';
-    } else if($d_state == 'Tasmania'){
-      $d_state_abbr = 'tas';
-    } else if($d_state == 'Australian Capital Territory'){
-      $d_state_abbr = 'act';
-    }
-
-    echo '<option value="'.$d_state_abbr.'" >'. $d_state .'</option>';
-
-}
-?>
-							</select>
-						</div>
-					</div>
-				</div>
-
-			</div>
-		<hr>
-		
-		<div class="row">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-offset-3 col-md-6">
-					  <button type="submit" class="btn btn-success">Submit</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		
-		</form>
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			</div>
-		</div>
-	</div>
-
+            </div>
+        </div>
+    </div>
 	<div class="container padding-50">
 		<div class="row">
 			<div class="col-md-12">
