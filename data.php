@@ -3,7 +3,7 @@ require_once('components/head.php');
 require_once('components/navbar.php');
 require_once('dbconfig.php');
 
-$stmt_d_meatyear = $mysqlConn->prepare('
+$stmt_d_meatyear = $db->prepare('
     SELECT DISTINCT
         meat_year
     FROM
@@ -53,8 +53,9 @@ else
 
 ?>
 
-	<div class="container">
-		<div class="text-center">
+	<div class="container padding-50">
+		<div class="row text-center">
+      <div class="col-md-6 col-md-offset-3">
 
 <?php
 if(isset($nosearch))
@@ -63,40 +64,79 @@ if(isset($nosearch))
 
               <div class="card card-outline-info">
                 <div class="card-header">
-                  <h4 class="m-b-0"><a href="#id_searchfilter" data-toggle="collapse" class="text-white">Filter Options</a></h4>
+                 
                 </div>
-                <div id="id_searchfilter" class="collapse">
+                <div id="id_searchfilter" >
                   <div class="card-block">
                     <form action="{$currentfile}" class="form-horizontal" method="GET">
                       <div class="form-body">
                         <div class="row">
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                             <div class="form-group row">
-                              <label class="control-label text-right col-md-3">Log Type</label>
+                              <label class="control-label text-right col-md-3">Select Your State</label>
                               <div class="col-md-9">
                                 <select name="f_logtype" class="form-control custom-select">
 <?php
-//populate drop down with $d_meatyearArray
+$stmt_d_state = $db->prepare('
+   SELECT DISTINCT
+        meat_state
+    FROM
+        meat_produced
+    ORDER BY
+        meat_state
+    ASC
+');
+
+$stmt_d_state -> execute();
+
+$d_stateArray = array();
+$d_stateArray[0] = '- Select a State -';
+while($d_state = $stmt_d_state -> fetch(PDO::FETCH_COLUMN))
+{
+    $d_stateArray[$d_state] = $d_state;
+
+    if($d_state == 'Western Australia'){
+      $d_state_abbr = 'wa';
+    } else if($d_state == 'New South Whales'){
+      $d_state_abbr = 'nsw';
+    } else if($d_state == 'Queensland'){
+      $d_state_abbr = 'qld';
+    } else if($d_state == 'Victoria'){
+      $d_state_abbr = 'vic';
+    } else if($d_state == 'South Australia'){
+      $d_state_abbr = 'sa';
+    } else if($d_state == 'Northern Territory'){
+      $d_state_abbr = 'nt';
+    } else if($d_state == 'Tasmania'){
+      $d_state_abbr = 'tas';
+    } else if($d_state == 'Australian Capital Territory'){
+      $d_state_abbr = 'act';
+    }
+
+    echo '<option name="'.$d_state_abbr.'" >'. $d_state .'</option>';
+
+}
+
+
+
 ?>
                                 </select>
                               </div>
                             </div>
                           </div>
-                          <div class="col-md-6">
+                          <div class="col-md-12">
                           </div>
                         </div>
                         <hr>
                         <div class="form-actions">
                           <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                               <div class="row">
-                                <div class="col-md-offset-3 col-md-9">
+                                <div class="col-md-offset-3 col-md-6">
                                   <button type="submit" class="btn btn-success">Submit</button>
                                 </div>
                               </div>
                             </div>
-                          <div class="col-md-6">
-                          </div>
                         </div>
                       </div>
                     </form>
@@ -113,7 +153,7 @@ else
 	echo '</pre>';
 }
 ?>
-
+      </div>
 		</div>
 	</div>
 
