@@ -1,3 +1,4 @@
+<p align="center"><img src="https://user-images.githubusercontent.com/10241434/28744564-3ee23c54-7496-11e7-8a68-761ce6c6bc48.png"></p>
 <h1 align="center">ewetube.space</h1>
 <p align="center">Providing local communities with useful, relevant and localised agricultural data.</p>
 
