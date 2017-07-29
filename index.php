@@ -14,7 +14,7 @@ require_once('config/dbconfig.php');
 
                 <?php
                 $states = new States($db);
-                echo Form::ForStates("bom.php", "get", Dropdown::ForStates("state", $states->GetAll()));
+                echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->GetAll()));
                 ?>
 
             </div>
