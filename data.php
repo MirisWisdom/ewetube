@@ -1,7 +1,6 @@
 <?php
 require_once('components/head.php');
-require_once('components/navbar.php');
-require_once('dbconfig.php');
+require_once('config/dbconfig.php');
 
 $stmt_d_meatyear = $db->prepare('
     SELECT DISTINCT
