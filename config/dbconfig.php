@@ -5,11 +5,11 @@ ini_set('display_errors', 'On');
 date_default_timezone_set('Australia/Perth');
 
 /* Database */
-define('DB_NAME',     'db_ewetube');
-define('DB_USERNAME', 'root');
-define('DB_PASSWORD', 'root');
-define('DB_HOST',     'localhost');
-define('DB_CHARSET',  'utf8');
+define( 'DB_NAME',     'db_ewetube' );
+define( 'DB_USERNAME', 'usr_ewetube' );
+define( 'DB_PASSWORD', 'CqdpcnlafNUPbukU' );
+define( 'DB_HOST',     'localhost' );
+define( 'DB_CHARSET',  'utf8' );
 
 $db_DB_HOST     = DB_HOST;
 $db_DB_NAME     = DB_NAME;
