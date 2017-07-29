@@ -1,19 +1,20 @@
-	<nav class="navbar navbar-inverse navbar-fixed-top bg-rgba-primary-0">
+	<nav class="navbar navbar-inverse navbar-fixed-top bg-rgba-black-4">
 		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+				<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 					<span class="sr-only">Toggle navigation</span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#">Ewetube</a>
+				</button> -->
+				<a class="navbar-brand" href="#">EweTube.space</a>
 			</div>
-			<div id="navbar" class="collapse navbar-collapse">
+			<!-- <div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Home</a></li>
 					<li><a href="/search">Search</a></li>
 				</ul>
-			</div><!--/.nav-collapse -->
+			</div> -->
 		</div>
+		
 	</nav>

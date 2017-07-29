@@ -5,11 +5,97 @@ require_once('components/navbar.php')
 	<div class="container-fluid bg-rgba-primary-4 rgba-white-0 padding-50">
 		<div class="container">
 			<div class="text-center">
-				<h1>ewetube.space</h1>
-				<p>Providing local communities with useful, relevant and localised agricultural data</p>
-				<a href="/search" class="btn btn-primary">Get Started Now!</a>
+				<img src="assets/img/icon.png" alt="EweTube" style="max-width: 300px;" />
+				<h1>Welcome to EweTube.Space</h1>
+				<p>Enter your search queries below to find data in your region</p>
+				<!-- <a href="/search" class="btn btn-primary">Get Started Now!</a> -->
+				<p>[INSERT FORM HERE]</p>
 			</div>
 		</div>
 	</div>
 
+	<div class="container padding-50">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="well text-center">
+					<h2>Here is some data</h2>
+					<h4>Western Australia</h4>
+					<canvas id="chart-450"></canvas>
+
+					<p>Explain what this graph is, if possible.</p>
+
+					<!-- Array
+					(
+					   [meat_id] => 450
+					   [meat_state] => Western Australia
+					   [meat_animal] => Sheep
+					   [meat_unit] => Tonnes
+					   [meat_datatype] => FLOW
+					   [meat_month] => 1
+					   [meat_year] => 2010
+					   [meat_sc_original] => 2705
+					   [meat_sc_seasonallyadjusted] => 2371
+					   [meat_sc_trend] => 2544
+					) -->
+
+					<script>
+						var ctx = document.getElementById('chart-450').getContext('2d');
+						var chart = new Chart(ctx, {
+						    // The type of chart we want to create
+						    type: 'line',
+
+						    // The data for our dataset
+						    data: {
+						        labels: ["January", "February", "March", "April", "May", "June", "July"],
+						        datasets: [{
+						            label: "My First dataset",
+						            backgroundColor: 'rgb(255, 99, 132)',
+						            borderColor: 'rgb(255, 99, 132)',
+						            data: [0, 10, 5, 2, 20, 30, 45],
+						        }]
+						    },
+
+						    // Configuration options go here
+						    options: {}
+						});
+					</script>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="well text-center">
+					<h2>Here is some more data</h2>
+					<h4>Western Australia</h4>
+					<canvas id="chart-451"></canvas>
+
+					<p>Explain what this graph is, if possible.</p>
+
+					<script>
+						var ctx = document.getElementById('chart-451').getContext('2d');
+						var chart = new Chart(ctx, {
+						    // The type of chart we want to create
+						    type: 'line',
+
+						    // The data for our dataset
+						    data: {
+						        labels: ["January", "February", "March", "April", "May", "June", "July"],
+						        datasets: [{
+						            label: "My First dataset",
+						            backgroundColor: 'rgb(255, 99, 132)',
+						            borderColor: 'rgb(255, 99, 132)',
+						            data: [0, 10, 5, 2, 20, 30, 45],
+						        }]
+						    },
+
+						    // Configuration options go here
+						    options: {}
+						});
+					</script>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
 <?php require_once('components/footer.php') ?>
+
+
