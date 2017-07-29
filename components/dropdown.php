@@ -45,4 +45,54 @@ class Dropdown
 </select>
 HTML;
     }
+
+
+
+
+    public static function ForAnimals($requestName, $animalsArray)
+    {
+        $formOptions = null;
+
+        foreach ($animalsArray as $key => $value) {
+            $optionName = null;
+
+
+            $formOptions .= "\t<option value='$value[0]'>$value[0]</option>\n";
+        }
+
+        return <<<HTML
+<select name="{$requestName}" class="form-control custom-select">
+    {$formOptions}
+</select>
+HTML;
+    }
+
+    public static function ForYears($requestName, $yearsArray)
+    {
+        $formOptions = null;
+
+        foreach ($yearsArray as $key => $value) {
+            $optionName = null;
+
+
+            $formOptions .= "\t<option value='$value[0]'>$value[0]</option>\n";
+        }
+
+        return <<<HTML
+<select name="{$requestName}" class="form-control custom-select">
+    {$formOptions}
+</select>
+HTML;
+    }
+
+
+
+
+
+
+
+
+
+
+
 }

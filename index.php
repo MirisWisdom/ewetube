@@ -2,7 +2,7 @@
 require_once('components/head.php');
 require_once('components/form.php');
 require_once('components/dropdown.php');
-require_once('data/States.php');
+require_once('data/Classes.php');
 require_once('config/dbconfig.php');
 ?>
 	<div class="container-fluid rgba-white-0 padding-50" style="background: url('assets/img/bg.jpg')">
@@ -14,7 +14,10 @@ require_once('config/dbconfig.php');
 
                 <?php
                 $states = new States($db);
-                echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->GetAll()));
+                $animals = new Animals($db);
+                $years = new Years($db);
+
+                echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->GetAll()), Dropdown::ForAnimals("animal", $animals->GetAll()), Dropdown::ForYears("year1", $years->GetAll()), Dropdown::ForYears("year2", $years->GetAll()));
                 ?>
 
             </div>
@@ -22,49 +25,16 @@ require_once('config/dbconfig.php');
     </div>
 	<div class="container padding-50">
 		<div class="row">
-			<div class="col-md-12">
-				<div class="well text-center">
-					<h2>Here is some data</h2>
-					<h4>Western Australia</h4>
-					<canvas id="chart-450"></canvas>
+			<div class="col-md-10 col-md-offset-1">
+				<div class="text-center">
+					<h2>What is EweTube.space?</h2>
 
-					<p>Explain what this graph is, if possible.</p>
 
-					<!-- Array
-					(
-					   [meat_id] => 450
-					   [meat_state] => Western Australia
-					   [meat_animal] => Sheep
-					   [meat_unit] => Tonnes
-					   [meat_datatype] => FLOW
-					   [meat_month] => 1
-					   [meat_year] => 2010
-					   [meat_sc_original] => 2705
-					   [meat_sc_seasonallyadjusted] => 2371
-					   [meat_sc_trend] => 2544
-					) -->
-
-					<script>
-						var ctx = document.getElementById('chart-450').getContext('2d');
-						var chart = new Chart(ctx, {
-						    // The type of chart we want to create
-						    type: 'bar',
-
-						    // The data for our dataset
-						    data: {
-						        labels: ["January", "February", "March", "April", "May", "June", "July"],
-						        datasets: [{
-						            label: "My First dataset",
-						            backgroundColor: 'rgb(255, 99, 132)',
-						            borderColor: 'rgb(255, 99, 132)',
-						            data: [0, 10, 5, 2, 20, 30, 45],
-						        }]
-						    },
-
-						    // Configuration options go here
-						    options: {}
-						});
-					</script>
+					<!-- 16:9 aspect ratio -->
+					<div class="embed-responsive embed-responsive-16by9">
+					  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NpEaa2P7qZI"></iframe>
+					</div>
+					
 				</div>
 			</div>
 			</div>

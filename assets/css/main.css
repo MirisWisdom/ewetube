@@ -54,3 +54,8 @@ canvas {
 .btn-success:hover {
 	background-color: rgba(126, 0, 40, 1) !important;
 }
+
+.container-fluid{
+	background-size:cover !important;
+	background-position: center center !important;
+}
