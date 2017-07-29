@@ -212,27 +212,3 @@ INSERT INTO `meat_produced` (`meat_id`, `meat_state`, `meat_animal`, `meat_unit`
 (537, 'Western Australia', 'Sheep', 'Tonnes', 'FLOW', 4, 2017, 1142, 1628, 1764),
 (538, 'Western Australia', 'Sheep', 'Tonnes', 'FLOW', 5, 2017, 1981, 2164, 1800),
 (539, 'New South Whales', 'Sheep', 'Tonnes', 'FLOW', 5, 2017, 1981, 2164, 1800);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `meat_produced`
---
-ALTER TABLE `meat_produced`
-  ADD PRIMARY KEY (`meat_id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `meat_produced`
---
-ALTER TABLE `meat_produced`
-  MODIFY `meat_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=540;COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
