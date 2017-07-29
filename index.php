@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<?php require_once('templates/head.php') ?>
+<?php require_once('components/head.php') ?>
 <body>
-	<?php require_once('templates/navbar.php') ?>
+	<?php require_once('components/navbar.php') ?>
 
 	<div class="container">
 		<div class="starter-template">
