@@ -1,8 +1,7 @@
 <?php
 require_once('components/head.php');
+require_once('components/navbar.php')
 ?>
-
-	<?php require_once('components/navbar.php') ?>
 
 	<div class="container">
 		<div class="text-center">
@@ -10,7 +9,6 @@ require_once('components/head.php');
 			<p>Providing local communities with useful, relevant and localised agricultural data</p>
 			<a href="/search" class="btn btn-primary">Get Started Now!</a>
 		</div>
-	</div><!-- /.container -->
+	</div>
 
 <?php require_once('components/footer.php') ?>
-	
