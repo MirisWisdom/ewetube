@@ -9,4 +9,6 @@
 
 	<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link href="assets/css/main.css" rel="stylesheet">
+
+	<script src="./assets/js/chart.bundle.min.js"></script>
 </head>
