@@ -16,7 +16,7 @@ require_once('components/navbar.php')
 
 	<div class="container padding-50">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-12">
 				<div class="well text-center">
 					<h2>Here is some data</h2>
 					<h4>Western Australia</h4>
@@ -42,7 +42,7 @@ require_once('components/navbar.php')
 						var ctx = document.getElementById('chart-450').getContext('2d');
 						var chart = new Chart(ctx, {
 						    // The type of chart we want to create
-						    type: 'line',
+						    type: 'bar',
 
 						    // The data for our dataset
 						    data: {
@@ -61,36 +61,6 @@ require_once('components/navbar.php')
 					</script>
 				</div>
 			</div>
-			<div class="col-md-6">
-				<div class="well text-center">
-					<h2>Here is some more data</h2>
-					<h4>Western Australia</h4>
-					<canvas id="chart-451"></canvas>
-
-					<p>Explain what this graph is, if possible.</p>
-
-					<script>
-						var ctx = document.getElementById('chart-451').getContext('2d');
-						var chart = new Chart(ctx, {
-						    // The type of chart we want to create
-						    type: 'line',
-
-						    // The data for our dataset
-						    data: {
-						        labels: ["January", "February", "March", "April", "May", "June", "July"],
-						        datasets: [{
-						            label: "My First dataset",
-						            backgroundColor: 'rgb(255, 99, 132)',
-						            borderColor: 'rgb(255, 99, 132)',
-						            data: [0, 10, 5, 2, 20, 30, 45],
-						        }]
-						    },
-
-						    // Configuration options go here
-						    options: {}
-						});
-					</script>
-				</div>
 			</div>
 		</div>
 
