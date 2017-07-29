@@ -9,3 +9,28 @@
 .bg-rgba-primary-2 { background-color: rgba(213, 71,117,1) !important}
 .bg-rgba-primary-3 { background-color: rgba(160, 15, 61,1) !important}
 .bg-rgba-primary-4 { background-color: rgba(126,  0, 40,1) !important}
+
+.rgba-white-0 { color: rgba(255,255,255,1) !important}	
+.rgba-white-1 { color: rgba(255,255,255,1) !important}
+.rgba-white-2 { color: rgba(255,255,255,1) !important}
+.rgba-white-3 { color: rgba(206,206,206,1) !important}
+.rgba-white-4 { color: rgba(162,160,160,1) !important}
+
+.bg-rgba-white-0 { background-color: rgba(255,255,255,1) !important}	
+.bg-rgba-white-1 { background-color: rgba(255,255,255,1) !important}
+.bg-rgba-white-2 { background-color: rgba(255,255,255,1) !important}
+.bg-rgba-white-3 { background-color: rgba(206,206,206,1) !important}
+.bg-rgba-white-4 { background-color: rgba(162,160,160,1) !important}
+
+.rgba-black-0 { color: rgba(  0,  0,  0,1) !important}	
+.rgba-black-1 { color: rgba(127,126,126,1) !important}
+.rgba-black-2 { color: rgba( 70, 70, 70,1) !important}
+.rgba-black-3 { color: rgba(  0,  0,  0,1) !important}
+.rgba-black-4 { color: rgba(  3,  1,  1,1) !important}
+
+.bg-rgba-black-0 { background-color: rgba(  0,  0,  0,1) !important}	
+.bg-rgba-black-1 { background-color: rgba(127,126,126,1) !important}
+.bg-rgba-black-2 { background-color: rgba( 70, 70, 70,1) !important}
+.bg-rgba-black-3 { color: rgba(  0,  0,  0,1) !important}
+.bg-rgba-black-4 { color: rgba(  3,  1,  1,1) !important}
+

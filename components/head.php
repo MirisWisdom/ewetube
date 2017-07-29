@@ -54,6 +54,7 @@ class Head
 	<script src="./assets/js/chart.bundle.min.js"></script>
 </head>
 <body>
+<div class="main-content">
 HTML;
 	}
 }

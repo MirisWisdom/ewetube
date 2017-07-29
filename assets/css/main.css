@@ -1,3 +1,22 @@
 body {
-	padding: 50px;
+	margin-top: 50px;
+
+}
+
+.padding-50{
+	padding-top:50px !important;
+	padding-bottom: 50px !important;
+}
+
+.padding-20{
+	padding-top:20px !important;
+	padding-bottom: 20px !important;
+}
+
+img{
+	max-width: 100%;
+}
+
+.text-center{
+	text-align: center !important;
 }
