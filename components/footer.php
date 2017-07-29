@@ -6,8 +6,9 @@
 			</div>
 			<div class="col-md-4 text-center">
 				<img src="http://govhack.org/wp-content/themes/govhack-17/img/logo.png" alt="Gov Hack Albany"/>
-				<br/>
-				By Emilian Roman, Adam Chambost, Michael Dolphin, Rodney Russel, Jevon Vermeulen
+				<div style="padding-top: 20px">
+				<p>By Emilian Roman, Adam Chambost, Michael Dolphin, Rodney Russel, Jevon Vermeulen</p>
+				</div>
 			</div>
 			<div class="col-md-4">
 			</div>
