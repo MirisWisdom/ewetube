@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "bootstrap": "^3.3.7",
-    "md2gslides": "^0.30"
+    "md2gslides": "^0.3.0"
   },
   "devDependencies": {},
   "scripts": {
