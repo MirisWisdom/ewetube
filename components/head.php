@@ -1,4 +1,16 @@
-<?php
+
+<?php 
+/* Get all functions */
+foreach(glob(dirname(__FILE__) . '/functions/func.*.php') as $function){
+	include $function;
+}
+
+$indexHead = new Head();
+$indexHead->AddStylesheet("main");
+$indexHead->AddStylesheet("index");
+$indexHead->AddStylesheet("color");
+
+echo $indexHead->GetMarkup();
 
 class Head
 {
@@ -18,6 +30,8 @@ class Head
 		}
 
 		return <<<HTML
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="utf-8">
@@ -39,6 +53,7 @@ class Head
 
 	<script src="./assets/js/chart.bundle.min.js"></script>
 </head>
+<body>
 HTML;
 	}
 }
