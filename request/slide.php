@@ -1,12 +1,12 @@
 <?php
 
-
 $markdown = new Markdown();
-$markdown->AddRequest($_GET['animal']);
+$markdown->AddRequest($_GET['latitude']);
+$markdown->AddRequest($_GET['longitude']);
 
 file_put_contents('markdown.md', $markdown->GetMarkdown());
 
-exec('/usr/bin/nodejs ../node_modules/md2gslides/bin/md2gslides.js --no-browser markdown.md > slideshow.url');
+exec('/usr/bin/node ../node_modules/md2gslides/bin/md2gslides.js --no-browser markdown.md > slideshow.url');
 
 echo file_get_contents('slideshow.url');
 
