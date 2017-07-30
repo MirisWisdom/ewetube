@@ -56,7 +56,7 @@ WHERE
 		AND `produce`.`state` = `states`.`id`
 		AND `animals`.`name` = '{$animal}'
 		AND `produce`.`year` >= {$minYear}
-		AND `produce`.`year` >= {$maxYear}
+		AND `produce`.`year` <= {$maxYear}
 		AND `states`.`name` = '{$state}'
 ORDER BY `produce`.`year`, `months`.`id` ASC
 SQL;
