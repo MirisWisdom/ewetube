@@ -46,14 +46,9 @@ WHERE meat_year >= {$minYear}
 	AND meat_year <= {$maxYear}
 	AND meat_animal = "$animal"
 	AND meat_state = "$state"
-ORDER BY
-	meat_year
+	ORDER BY meat_year, meat_month
 ASC
 SQL;
-
-		echo '<pre>';
-		echo "$query";
-		echo '</pre>';
 
 		$statement = $this->db->prepare($query);
 		$statement->execute();
