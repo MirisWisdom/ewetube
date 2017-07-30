@@ -1,7 +1,12 @@
 INSERT INTO `animal` (`name`) VALUES ('Sheep');
 
 INSERT INTO `states` (`name`) VALUES ('Western Australia');
+INSERT INTO `states` (`name`) VALUES ('South Australia');
+INSERT INTO `states` (`name`) VALUES ('Northern Territory');
+INSERT INTO `states` (`name`) VALUES ('Queensland');
 INSERT INTO `states` (`name`) VALUES ('New South Wales');
+INSERT INTO `states` (`name`) VALUES ('Victoria');
+INSERT INTO `states` (`name`) VALUES ('Tasmania');
 
 INSERT INTO `units` (`type`) VALUES ('Tonne');
 
@@ -227,4 +232,3 @@ INSERT INTO produce (state, animal, unit, month, year, original, adjusted, trend
 (1, 1, 1, 3, 2017, 1529, 1552, 1754),
 (1, 1, 1, 4, 2017, 1142, 1628, 1764),
 (1, 1, 1, 5, 2017, 1981, 2164, 1800),
-(2, 1, 1, 5, 2017, 1981, 2164, 1800);
