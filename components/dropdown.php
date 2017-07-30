@@ -31,7 +31,7 @@ class Dropdown
                 case "Australian Capital Territory":
                     $optionName = "act";
                     break;
-                case "New South Whales":
+                case "New South Wales":
                     $optionName = "nsw";
                     break;
             }
