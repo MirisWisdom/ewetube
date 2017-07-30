@@ -4,8 +4,10 @@ require_once('components/form.php');
 require_once('components/dropdown.php');
 require_once('components/chart.php');
 require_once('config/dbconfig.php');
-require_once('data/search.php'); //This is where I'm storing the $_GET variables eg. $get_state
-require_once('data/Classes.php');
+require_once('request/search.php'); //This is where I'm storing the $_GET variables eg. $get_state
+require_once('data/Animals.php');
+require_once('data/Years.php');
+require_once('data/States.php');
 
 
 require_once('data/MeatProduced.php');
