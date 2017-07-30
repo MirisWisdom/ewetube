@@ -34,7 +34,7 @@ require_once('config/dbconfig.php');
 
 					<!-- 16:9 aspect ratio -->
 					<div class="embed-responsive embed-responsive-16by9">
-					  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/NpEaa2P7qZI"></iframe>
+					  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/8Kn9_BgpMHw"></iframe>
 					</div>
 					
 				</div>
