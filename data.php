@@ -2,6 +2,7 @@
 require_once('components/head.php');
 require_once('components/form.php');
 require_once('components/dropdown.php');
+require_once('components/chart.php');
 require_once('config/dbconfig.php');
 require_once('data/search.php'); //This is where I'm storing the $_GET variables eg. $get_state
 require_once('data/Classes.php');
@@ -31,23 +32,12 @@ $MeatProduced = new MeatProduced($db);
   </div>
 </div>
 
-
-<?php 
-
-echo '<pre>';
-print_r($MeatProduced);
-echo '</pre>';
-
-?>
-
-
-
 <div class="container padding-50">
   <div class="row">
     <div class="col-md-12">
       <div class="well text-center" id="chart-450-wrap">
-        <h2>Amount of Sheep meat produced monthly from 2010 to 2011 (tonnes)</h2>
-        <h4>Western Australia</h4>
+        <h2>Amount of <?php echo $get_animal ?> meat produced monthly from <?php echo $get_year1 ?> to <?php echo $get_year2 ?> (tonnes)</h2>
+        <h4><?php echo $get_state ?></h4>
         <canvas id="chart-450"></canvas>
 
         <script>
@@ -56,16 +46,9 @@ echo '</pre>';
           // The type of chart we want to create
           type: 'bar',
 
-          // The data for our dataset
-          data: {
-            labels: ["January 2010", "February 2010", "March 2010", "April 2010", "May 2010", "June 2010", "July 2010", "August 2010", "September 2010", "October 2010", "November 2010", "December 2010", "January 2011"],
-            datasets: [{
-            label: "Sheep Meat Produced (tonnes)",
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
-            data: [2705,2723,2355,1855,1880,773,873,3172,4263,3845,3991,2530,2365],
-            }]
-          },
+          <?php
+          echo Chart::GetData($MeatProduced->GetByAll($get_animal, $get_year1, $get_year2, $get_state));
+          ?>
 
           // Configuration options go here
           options: {
