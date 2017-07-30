@@ -17,7 +17,6 @@ $animals = new Animals($db);
 $years = new Years($db);
 
 $MeatProduced = new MeatProduced($db);
-
 ?>
 
 
@@ -88,7 +87,7 @@ $MeatProduced = new MeatProduced($db);
       <a href="request/slide.php" class="btn btn-lg btn-primary">Save Results to Google Slide Presentation <span class="glyphicon glyphicon-new-window"></span></a>
       <br>
       <br>
-      <i style="color: crimson">This feature is currently unavailable.</i>
+      <i style="color: crimson"><a target="_blank" href="https://docs.google.com/presentation/d/17eOlNMEuThT0-1-Fd1TU2azTqanpSNbWL1qUkp4ITtQ">View sample here</a></i>
     </div>
   </div>
 </div>
