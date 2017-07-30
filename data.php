@@ -84,10 +84,7 @@ $MeatProduced = new MeatProduced($db);
   <div class="row">
     <div class="col-md-12 text-center">
 
-      <a href="request/slide.php" class="btn btn-lg btn-primary">Save Results to Google Slide Presentation <span class="glyphicon glyphicon-new-window"></span></a>
-      <br>
-      <br>
-      <i style="color: crimson"><a target="_blank" href="https://docs.google.com/presentation/d/17eOlNMEuThT0-1-Fd1TU2azTqanpSNbWL1qUkp4ITtQ">View sample here</a></i>
+      <a href="/sample" class="btn btn-lg btn-primary">Save Results to Google Slide Presentation <span class="glyphicon glyphicon-new-window"></span></a>
     </div>
   </div>
 </div>
