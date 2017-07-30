@@ -39,13 +39,22 @@ class Markdown
 			$markdownData .= "$request :: ";
 		}
 
-		return <<<MD
+		return <<<MARKDOWN
 ---
 
-# A basic generated markdown file
-## Another sub title...
+# Sheep Meat Production (tonnes)
 
-The following was your request: {$markdownData}
-MD;
+![](https://ewetube.space/yourdata/$session.png){.backgroup}
+
+---
+
+# $location & surrounds
+
+Latitude:  $long
+Longitude: $lat
+
+![](https://maps.googleapis.com/maps/api/staticmap?zoom=13&size=800x600&maptype=roadmap&center=$long,$lat&key=AIzaSyDtVieK0cM4pxxaRO1-2brs97E1CgakUoo){.background}
+
+MARKDOWN;
 	}
 }
