@@ -13,12 +13,10 @@ class Years
 	{
 		$query = <<<SQL
 SELECT DISTINCT
-	meat_year
+	`year`
 FROM
-	meat_produced
-ORDER BY
-	meat_year
-ASC
+	`produce`
+ORDER BY `year` ASC
 SQL;
 
 		$statement = $this->db->prepare($query);

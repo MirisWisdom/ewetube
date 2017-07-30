@@ -12,17 +12,21 @@ class MeatProduced
 	public function GetByYears($minYear, $maxYear)
 	{
 		$query = <<<SQL
-SELECT
-	meat_animal,
-	meat_month,
-	meat_year
-	meat_sc_original
+SELECT 
+	`animals`.`name`,
+	`months`.`name`,
+	`produce`.`year`,
+	`produce`.`original`
 FROM
-	meat_produced
-WHERE meat_year >= {$minYear} AND meat_year <= {$maxYear}
-ORDER BY
-	meat_year
-ASC
+	`produce`,
+	`months`,
+	`animals`
+WHERE
+	`produce`.`month` = `months`.`id`
+AND
+	`produce`.`animal` = `animals`.`id`
+AND
+	(`produce`.`year` >= $minYear OR `produce`.`year` <= $maxYear)
 SQL;
 
 		$statement = $this->db->prepare($query);
@@ -34,20 +38,27 @@ SQL;
 	public function GetByAll($animal, $minYear, $maxYear, $state)
 	{
 		$query = <<<SQL
-SELECT
-	meat_animal,
-	meat_month,
-	meat_year,
-	meat_sc_original,
-	meat_state
+SELECT 
+	`animals`.`name` AS `animal`,
+	`months`.`id` AS `month_id`,
+	`months`.`name` AS `month`,
+	`produce`.`year`,
+	`produce`.`original`,
+	`states`.`name`
 FROM
-	meat_produced
-WHERE meat_year >= {$minYear}
-	AND meat_year <= {$maxYear}
-	AND meat_animal = "$animal"
-	AND meat_state = "$state"
-	ORDER BY meat_year, meat_month
-ASC
+	`produce`,
+	`animals`,
+	`months`,
+	`states`
+WHERE
+	`produce`.`animal` = `animals`.`id`
+		AND `produce`.`month` = `months`.`id`
+		AND `produce`.`state` = `states`.`id`
+		AND `animals`.`name` = '{$animal}'
+		AND `produce`.`year` >= {$minYear}
+		AND `produce`.`year` >= {$maxYear}
+		AND `states`.`name` = '{$state}'
+ORDER BY `produce`.`year`, `months`.`id` ASC
 SQL;
 
 		$statement = $this->db->prepare($query);

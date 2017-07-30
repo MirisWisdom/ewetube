@@ -12,12 +12,12 @@ class Animals
 	public function GetAll()
 	{
 		$query = <<<SQL
-SELECT DISTINCT
-	meat_animal
+SELECT
+	`name`
 FROM
-	meat_produced
+	`animals`
 ORDER BY
-	meat_animal
+	`name`
 ASC
 SQL;
 

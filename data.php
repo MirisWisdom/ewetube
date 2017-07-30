@@ -27,7 +27,7 @@ $MeatProduced = new MeatProduced($db);
     <div class="text-center">
       <h2>Your Search Query:</h2>
       <?php
-      echo '<h4>'.$get_animal.' data recorded in '.$get_state.' between Jan '.$get_year1.' and Dec '.$get_year2.'</h4>';
+      echo '<h4>'.$get_animal.' data recorded in '.$get_state.' between January '.$get_year1.' and December '.$get_year2.'</h4>';
       ?>
       <a href="index.php" class="btn btn-sm btn-danger">Start a new search</a>
     </div>
@@ -38,7 +38,7 @@ $MeatProduced = new MeatProduced($db);
   <div class="row">
     <div class="col-md-12">
       <div class="well text-center" id="chart-450-wrap">
-        <h2>Amount of <?php echo $get_animal ?> meat produced monthly from <?php echo $get_year1 ?> to <?php echo $get_year2 ?> (tonnes)</h2>
+        <h2><?php echo $get_animal ?> meat produced monthly from <?php echo $get_year1 ?> to <?php echo $get_year2 ?></h2>
         <h4><?php echo $get_state ?></h4>
         <canvas id="chart-450"></canvas>
 

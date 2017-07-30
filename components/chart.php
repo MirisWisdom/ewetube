@@ -6,17 +6,17 @@ class Chart
 {
 	public static function GetData($meatArray)
 	{
-		$animal = $meatArray[0]["meat_animal"];
+		$animal = $meatArray[0]["animal"];
 
 		$dates = null;
 		$values = null;
 
-		foreach ($meatArray as $key => $value) {
-			$month = Month::GetName($value["meat_month"]);
-			$year = $value["meat_year"];
-
+		foreach ($meatArray as $result) {
+			$month = $result["month"];
+			$year = $result["year"];
 			$dates .= "'$month $year',";
-			$values .= $value["meat_sc_original"] . ",";
+
+			$values .= $result["original"] . ",";
 		}
 
 		return <<<JS
