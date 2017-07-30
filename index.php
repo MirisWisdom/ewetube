@@ -2,7 +2,9 @@
 require_once('components/head.php');
 require_once('components/form.php');
 require_once('components/dropdown.php');
-require_once('data/Classes.php');
+require_once('data/States.php');
+require_once('data/Years.php');
+require_once('data/Animals.php');
 require_once('config/dbconfig.php');
 ?>
 	<div class="container-fluid rgba-white-0 padding-50" style="background: url('assets/img/bg.jpg')">
