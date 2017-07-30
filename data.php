@@ -177,6 +177,7 @@ if(isset($_GET['state'])){
 echo Form::ForStates("data.php", "get", Dropdown::ForStates("state", $states->GetAll()), Dropdown::ForAnimals("animal", $animals->GetAll()), Dropdown::ForYears("year1", $years->GetAll()), Dropdown::ForYears("year2", $years->GetAll()));
 ?>
 
+	</div> <!-- / main content -->
 
 <?php 
 
