@@ -12,13 +12,11 @@ class States
 	public function GetAll()
 	{
 		$query = <<<SQL
-SELECT DISTINCT
-	meat_state
+SELECT 
+	`name`
 FROM
-	meat_produced
-ORDER BY
-	meat_state
-ASC
+	`states`
+ORDER BY `name` ASC
 SQL;
 
 		$statement = $this->db->prepare($query);
