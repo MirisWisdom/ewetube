@@ -1,4 +1,3 @@
-	</div> <!-- / main content -->
 
 	<footer class="contianer-fluid bg-rgba-black-0 rgba-white-4 padding-20">
 		<div class="container">
@@ -14,7 +13,6 @@
 			</div>
 		</div>
 	</footer>	
-</body>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="assets/js/matchHeight.js"></script>
@@ -25,5 +23,7 @@ $(function() {
 	$('.matchheight').matchHeight();
 });
 </script>
+
+</body>
 
 </html>
